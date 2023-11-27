@@ -1,5 +1,5 @@
 all:
-	rd /s /q bin
-	if exist bin rd /s /q bin
+	rm -rf bin || true
 	mkdir bin
-	gcc -o bin/ping_pong src/ping_pong.c
+	gcc -o bin/ping_pong.exe src/ping_pong.c
+	bin/ping_pong.exe
